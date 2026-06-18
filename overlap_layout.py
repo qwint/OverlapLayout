@@ -149,3 +149,9 @@ class OverlapLayout(base._SimpleLayoutBase):
 
     def add_client(self, client: Window) -> None:
         self.clients.append(client)
+
+    def remove(self, client: Window) -> Window | None:
+        self.last_side_index = min(self.last_side_index, len(self.clients) - 2)
+        ret = super().remove(client)
+        self.group.layout_all()
+        return ret
