@@ -32,9 +32,9 @@ class OverlapLayout(base._SimpleLayoutBase):
             return
         client.unhide()
         coords = [
-            self.margin + (right_aligned and (screen_rect.width // 10 * 4)),
+            screen_rect.x + self.margin + (right_aligned and (screen_rect.width // 10 * 4)),
             # who ever said I wasn't a python criminal
-            self.margin,
+            screen_rect.y + self.margin,
             ((screen_rect.width // 10) * 6) - (self.border_width+self.margin)*2,
             screen_rect.height - (self.border_width+self.margin)*2,
         ]
