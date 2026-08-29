@@ -1,4 +1,4 @@
-# Overlap Layout for Qtile
+# Overlap Layout for [Qtile](https://github.com/qtile/qtile)
 
 This layout will tile two visible windows that each cover 60% of the screen and overlap in the middle.
 
